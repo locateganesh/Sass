@@ -1,0 +1,26 @@
+$color-primary: orange;
+$color-secondary: green;
+$color-tertiary: royalblue;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+body{
+    margin:0;
+}
+nav{
+    background: $color-primary;
+}
+
+.banner h1{
+    font-size: $font-lg;
+    color: $color-primary;
+    text-align: center;
+}
+
+.footer h3{
+    font-size: $font-md;
+    color: $color-secondary;
+    text-align: center; 
+}
