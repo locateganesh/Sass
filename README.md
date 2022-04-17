@@ -24,3 +24,17 @@ Sass variable is like a container, **it used to store information that can be us
      color: $color-secondary;
    }
    ```
+   
+### Variable name - or _:
+
+* The declared variable you can as hyphened (-) or same you use with an underscore (_).
+
+    ```
+    $font-lg: 40px;
+    h1 {
+      font-size: $font-lg;
+    }
+    h2 {
+      font-size: $font_lg;
+    }
+    ```
