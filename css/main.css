@@ -4,16 +4,8 @@ body {
 nav {
   background: orange; }
 
-.banner h1 {
+.heading, .banner h1, .footer h3 {
+  color: orange;
   font-size: 40px;
-  color: green;
+  background-color: royalblue;
   text-align: center; }
-
-.footer h3 {
-  font-size: 30px;
-  color: green;
-  text-align: center;
-  transition: color 0.5s ease-in, background-color 0.3s ease-out; }
-  .footer h3:hover {
-    background-color: royalblue;
-    color: orange; }

@@ -13,25 +13,17 @@ nav{
     background: $color-primary;
 }
 
-@mixin transition($param...){ 
-    transition: $param;
-}
-@mixin headingStyles($fontSize: 30px){
-    font-size: $fontSize;
-    color: $color-secondary;
+.heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-tertiary;
     text-align: center;
 }
 
-
 .banner h1{
-    @include headingStyles($font-lg);
+    @extend .heading;
 }
 
 .footer h3{
-    @include headingStyles;
-    @include transition(color .5s ease-in, background-color .3s ease-out);
-    &:hover{
-        background-color: $color-tertiary;
-        color: $color-primary; 
-    }
+    @extend .heading;
 }
