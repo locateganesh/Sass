@@ -23,5 +23,9 @@ nav{
 .footer h3{
     font-size: $font-md;
     color: $color-secondary;
-    text-align: center; 
+    text-align: center;
+    &:hover{
+        background-color: $color-tertiary;
+        color: $color-primary;
+    }
 }

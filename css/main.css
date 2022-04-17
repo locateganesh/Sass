@@ -13,3 +13,6 @@ nav {
   font-size: 30px;
   color: tomato;
   text-align: center; }
+  .footer h3:hover {
+    background-color: royalblue;
+    color: orange; }
