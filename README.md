@@ -1,40 +1,65 @@
 # SASS / SCSS
 
-### Variable:
+### Mixin:
 
-Sass variable is like a container, **it used to store information that can be used thoughtout the stylesheet when you need**. You can store things like colors, font stacks, or any CSS value according to your future reusability. The $ symbol is used to make something a variable.
+Mixin is a block of code, which groups a bunch of reusable CSS styles.
+
+```
+@mixin headingStyles{
+    color: $color-secondary;
+    text-align: center;
+}
+.banner h1{
+    font-size: $font-lg;
+    @include headingStyles;
+}
+.footer h3{
+    font-size: $font-md;
+    @include headingStyles;
+}
+```
+
+We can use mixing as a function with parameters also.
+
+```
+@mixin headingStyles($fontSize){
+    font-size: $fontSize;
+    color: $color-secondary;
+    text-align: center;
+}
+.banner h1{
+    @include headingStyles($font-lg);
+}
+.footer h3{
+    @include headingStyles($font-md);
+}
+```
+
+**Note:** Parameter should as SCSS variable start with $.
 
 
-### Global & local variable:
+Also, we can define default parameters also.
 
-* Defined as top are normally global scopes.
-    * `$color-secondary: green;`
-  
-* If a variable is defined inside curly braces ({} or selector) then it is local scope.
-   ```
-   h1 {
-     color: $color-secondary;
-   }
-   ```
+```
+@mixin headingStyles($fontSize: 50px){
+    font-size: $fontSize;
+    color: $color-secondary;
+    text-align: center;
+}
+```
 
-* You can define global scope variable in local and make it global by !global tag.
-   ```
-   h1 {
-     $color-secondary: red !global;
-     color: $color-secondary;
-   }
-   ```
-   
-### Variable name - or _:
+When mixing arguments are going to multiple arguments separated by a comma then you can use $param... (with …) as a parameter.
 
-* The declared variable you can as hyphened (-) or same you use with an underscore (_).
-
-    ```
-    $font-lg: 40px;
-    h1 {
-      font-size: $font-lg;
+```
+@mixin transition($param...){
+    transition: $param;
+}
+.footer h3{
+    @include headingStyles($font-md);
+    @include transition(color .5s ease-in, background-color .3s ease-out);
+    &:hover{
+        background-color: $color-tertiary;
+        color: $color-primary; 
     }
-    h2 {
-      font-size: $font_lg;
-    }
-    ```
+}
+```

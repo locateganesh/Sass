@@ -13,15 +13,25 @@ nav{
     background: $color-primary;
 }
 
-.banner h1{
-    $color-secondary: tomato !global;
-    font-size: $font-lg;
+@mixin transition($param...){ 
+    transition: $param;
+}
+@mixin headingStyles($fontSize: 30px){
+    font-size: $fontSize;
     color: $color-secondary;
     text-align: center;
 }
 
+
+.banner h1{
+    @include headingStyles($font-lg);
+}
+
 .footer h3{
-    font-size: $font_md;
-    color: $color-secondary;
-    text-align: center; 
+    @include headingStyles;
+    @include transition(color .5s ease-in, background-color .3s ease-out);
+    &:hover{
+        background-color: $color-tertiary;
+        color: $color-primary; 
+    }
 }
