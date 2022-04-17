@@ -14,8 +14,9 @@ nav{
 }
 
 .banner h1{
+    $color-secondary: tomato !global;
     font-size: $font-lg;
-    color: $color-primary;
+    color: $color-secondary;
     text-align: center;
 }
 
