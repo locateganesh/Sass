@@ -30,7 +30,7 @@ Example:
     p{
         font-size: 16px;
     }
-    
+    /** Extend gorups same styles. **/
     h2, p{
         color: #222;
     }
@@ -54,4 +54,4 @@ Extend Example:
 }
 ```
 
-Caveat: extend can't work with multi layer selectors (@extend .banner h1), you can do it only with single selector (@extend h1).
+**Caveat:** extend can't work with multi layer selectors (@extend .banner h1), you can do it only with single selector (@extend h1).
