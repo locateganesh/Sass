@@ -11,12 +11,16 @@ Sass variable is like a container, **it used to store information that can be us
     * `$color-secondary: green;`
   
 * If a variable is defined inside curly braces ({} or selector) then it is local scope.
-`h1 {
-  color: $color-secondary;
-}`
+   ```
+   h1 {
+     color: $color-secondary;
+   }
+   ```
 
 * You can define global scope variable in local and make it global by !global tag.
-`h1 {
-  $color-secondary: red !global;
-  color: $color-secondary;
-}`
+   ```
+   h1 {
+     $color-secondary: red !global;
+     color: $color-secondary;
+   }
+   ```
