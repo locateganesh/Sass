@@ -9,3 +9,9 @@ nav {
   font-size: 40px;
   background-color: royalblue;
   text-align: center; }
+
+.banner p {
+  font-size: 40px; }
+
+.footer p {
+  font-size: 50px; }

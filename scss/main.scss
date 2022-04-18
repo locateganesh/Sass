@@ -20,10 +20,21 @@ nav{
     text-align: center;
 }
 
+@function fontSize($size: 25px){
+    @return $size * 2;
+}
+
 .banner h1{
     @extend .heading;
 }
 
 .footer h3{
     @extend .heading;
+}
+
+.banner p{
+    font-size: fontSize($font-sm);
+}
+.footer p{
+    font-size: fontSize();
 }
