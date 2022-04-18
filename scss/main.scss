@@ -10,7 +10,7 @@ body{
     margin:0;
 }
 nav{
-    background: $color-primary;
+    background: lighten($color-primary, 20%);
 }
 
 .heading {

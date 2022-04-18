@@ -24,3 +24,15 @@ You can define default parameter also.
 }
 ```
 
+SCSS function has some pre-defined funtions:
+
+```
+.nav{
+    background: lighten($color-primary, 20%);
+}
+// or
+.nav{
+    background: darken($color-primary, 40%);
+}
+```
+
