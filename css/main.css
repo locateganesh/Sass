@@ -4,14 +4,8 @@ body {
 nav {
   background: #ffc966; }
 
-.heading, .banner h1, .footer h3 {
+.banner h1, .footer h3 {
   color: orange;
   font-size: 40px;
   background-color: royalblue;
   text-align: center; }
-
-.banner p {
-  font-size: 40px; }
-
-.footer p {
-  font-size: 50px; }

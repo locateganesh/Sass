@@ -1,38 +1,36 @@
 # SASS / SCSS
 
-### Functions:
+### Placeholder Selectors:
 
-Functions allows us to run code over and over again when we call it.
+Placeholder selectors could be defined with % and it will be just scss file, it will not go in css file.
 
-```
-@function fontSize($size){
-    @return $size * 2;
-}
-.banner p{
-    font-size: fontSize($font-sm);
-}
-```
-
-You can define default parameter also.
 
 ```
-@function fontSize($size: 25px){
-    @return $size * 2;
+.heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-tertiary;
+    text-align: center;
 }
-.footer p{
-    font-size: fontSize();
-}
-```
 
-SCSS function has some pre-defined funtions:
+.banner h1{
+    @extend .heading;
+}
+```
+`.heading` selector is like class selector and .heading will also be available in css even though it's only for SCSS.
+
+
+You can do instead.
 
 ```
-.nav{
-    background: lighten($color-primary, 20%);
+%heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-tertiary;
+    text-align: center;
 }
-// or
-.nav{
-    background: darken($color-primary, 40%);
+
+.banner h1{
+    @extend %heading;
 }
-```
 
