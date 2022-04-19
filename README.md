@@ -1,36 +1,23 @@
 # SASS / SCSS
 
-### Placeholder Selectors:
+### Import and Partials:
 
-Placeholder selectors could be defined with % and it will be just scss file, it will not go in css file.
+Sass keep the code DRY. One way to write DRY code is to keep related code in separate files. You can create small files css snippets in other sass files. Eg. rest file, variables, colors, fonts, etc.
 
+#### Sass Partials:
 
-```
-.heading {
-    color: $color-primary;
-    font-size: $font-lg;
-    background-color: $color-tertiary;
-    text-align: center;
-}
-
-.banner h1{
-    @extend .heading;
-}
-```
-`.heading` selector is like class selector and .heading will also be available in css even though it's only for SCSS.
-
-
-You can do instead.
+Sass transpiles all the .scss files directly. However you want to import a file, you do not need the file to be transpiled directly. For that reason underscore (_) used in file.
 
 ```
-%heading {
-    color: $color-primary;
-    font-size: $font-lg;
-    background-color: $color-tertiary;
-    text-align: center;
-}
+_reset.scss
+```
 
-.banner h1{
-    @extend %heading;
-}
+#### Sass Import:
 
+The `@import` directive allows you to include the content of one file in another.
+
+```
+@import "reset";
+```
+
+*No need to write _ and .scss extension. It's recognized by transpiler.*
