@@ -1,9 +1,12 @@
-$b: "border";
-$c: "color";
+$colors: (
+    1: red,
+    2: green,
+    3: blue,
+    4: orange
+);
 
-h1{
-    box-sizing: #{$b}-box;
-    #{$b}: 1px solid blue;
-    #{$c}: #fff;
-    background-#{$c}: tomato;
+@for $i from 1 through 4 {
+    .paragraph-#{$i} {
+        background-color: map-get($colors, $i);
+    }
 }
