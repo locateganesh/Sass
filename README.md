@@ -4,16 +4,12 @@
 
 
 ```
-$colors: (
-    1: red,
-    2: green,
-    3: blue,
-    4: orange
-);
+$colors: red green blue orange;
+//$colors: red, green, blue, orange; // Sass list both will work space or comma separator.
 
-@for $i from 1 through 4 {
-    .paragraph-#{$i} {
-        background-color: map-get($colors, $i);
+@each $color in $colors {
+    .paragraph-#{$color} {
+        color: $color;
     }
 }
 ```
