@@ -1,55 +1,5 @@
-* {
-  box-sizing: border-box; }
-
-body {
-  margin: 0; }
-
-nav {
-  background: #ffc966; }
-
-.footer h3 {
-  color: orange;
-  font-size: 40px;
-  background-color: royalblue;
-  text-align: center; }
-
-.numbers {
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 20px; }
-
-.strings {
-  font-familty: "Helvetica", arial, sans-sarif;
-  font-weight: bold;
-  font-style: italic; }
-
-.colors {
-  color: red;
-  background-color: #ff0000;
-  border-color: red;
-  outline-color: red; }
-
-.lists {
-  margin: 10px 15px 5px 20px;
-  font-family: 'Raleway', 'Dosis', 'Lato';
-  border: 1px solid red; }
-
 h1 {
-  color: red;
-  background-color: green;
-  border: 10px solid blue; }
-
-.rounded-btn {
+  box-sizing: border-box;
+  border: 1px solid blue;
   color: #fff;
-  background-color: orange;
-  padding: 10px;
-  border-radius: 30px; }
-
-.button-normal {
-  color: #fff;
-  background-color: orange;
-  padding: 10px; }
-
-h3 {
-  font-size: 18px;
-  font-weight: bold; }
+  background-color: tomato; }
