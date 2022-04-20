@@ -1,18 +1,32 @@
 # SASS / SCSS
 
-### For Loop:
+### If Directive:
 
 
 ```
-$colors: red green blue orange;
-//$colors: red, green, blue, orange; // Sass list both will work space or comma separator.
-
-@each $color in $colors {
-    .paragraph-#{$color} {
-        color: $color;
+h1 {
+    @if (2 > 4){
+        color:red;
+    } @else {
+        color:blue
     }
+}
+
+@mixin headerSizes($size) {
+    font: {
+        @if($size == large){
+            size: 45px;
+        } @else if($size == medium) {
+            size: 30px;
+        } @else {
+            size: 15px;
+        }
+    }
+}
+
+h2 {
+    @include headerSizes(medium);
 }
 ```
 
-`@for $i from 1 through 4` instead `@for $i from 1 to 4`. You can use `to` also rather `through` only difference with `to` is it will 1 to 3 it will skip last one like normal programming language. 
 
